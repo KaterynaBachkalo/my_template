@@ -1,0 +1,35 @@
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.back-wrap {
+  position: absolute;
+  top: 32px;
+  left: 16px;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 12px;
+
+  @include mx.mq('lg') {
+    margin-bottom: 0;
+    margin-top: 42px;
+    left: 189px;
+  }
+}
+
+.back-img {
+  width: 24px;
+  height: 24px;
+}
+
+.back-text {
+  @include mx.font(14, 100, 0, 400);
+  color: fn.get-color('dark');
+  text-align: center;
+
+  @include mx.mq('lg') {
+  }
+}

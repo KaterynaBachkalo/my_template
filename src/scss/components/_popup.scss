@@ -1,0 +1,101 @@
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.popup {
+  position: fixed;
+  z-index: 20;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 320px;
+
+  background: fn.get-color('blue');
+  color: fn.get-color('light');
+
+  margin-bottom: 20px;
+  padding: 40px 26px;
+
+  @include mx.mq('sm') {
+    width: 375px;
+  }
+
+  @include mx.mq('lg') {
+    padding: 40px 303px;
+    width: 1440px;
+  }
+}
+
+.popup-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include mx.mq('lg') {}
+}
+
+.popup-text {
+  text-align: center;
+
+  @extend %text-cookies;
+  margin-bottom: 24px;
+}
+
+.popup-wrap {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+
+  &>button {
+    width: 153px;
+    height: 39px;
+    border: none;
+  }
+
+  @include mx.mq('lg') {
+    flex-direction: row;
+    gap: 80px;
+    justify-content: center;
+
+    &>button {
+      width: 153px;
+      height: 39px;
+    }
+  }
+}
+
+#declineCookiesBtn {
+  @extend %button-cookies;
+  text-transform: uppercase;
+  background-color: fn.get-color('transparent');
+  transition: all 0.3s ease;
+  border-bottom: 2px solid fn.get-color('accent');
+  color: fn.get-color('light');
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+}
+
+#acceptCookiesBtn {
+  @include mx.font(14, 100, 0, 500);
+
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background: fn.get-color('accent');
+  color: fn.get-color('light');
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border-radius: 12px;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+}

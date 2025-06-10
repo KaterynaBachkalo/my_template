@@ -1,0 +1,33 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+
+<symbol id="icon-close" viewBox="0 0 32 32">
+<path d="M8.534 25.333l-1.867-1.867 7.467-7.467-7.467-7.467 1.867-1.867 7.467 7.467 7.467-7.467 1.867 1.867-7.467 7.467 7.467 7.467-1.867 1.867-7.467-7.467-7.467 7.467z"></path>
+</symbol>
+
+<symbol id="icon-menu" viewBox="0 0 32 32">
+<path d="M4 24v-2.667h24v2.667h-24zM4 17.333v-2.667h24v2.667h-24zM4 10.667v-2.667h24v2.667h-24z"></path>
+</symbol>
+
+<symbol id="icon-chevron-down" viewBox="0 0 20 20">
+<path d="M17.418 6.109c0.272-0.268 0.709-0.268 0.979 0s0.271 0.701 0 0.969l-7.908 7.83c-0.27 0.268-0.707 0.268-0.979 0l-7.908-7.83c-0.27-0.268-0.27-0.701 0-0.969s0.709-0.268 0.979 0l7.419 7.141 7.418-7.141z"></path>
+</symbol>
+
+<symbol id="icon-chevron-up" viewBox="0 0 20 20">
+<path d="M2.582 13.891c-0.272 0.268-0.709 0.268-0.979 0s-0.271-0.701 0-0.969l7.908-7.83c0.27-0.268 0.707-0.268 0.979 0l7.908 7.83c0.27 0.268 0.27 0.701 0 0.969s-0.709 0.268-0.978 0l-7.42-7.141-7.418 7.141z"></path>
+</symbol>
+
+<symbol id="icon-add" viewBox="0 0 32 32">
+<path d="M14.667 17.333h-8v-2.667h8v-8h2.667v8h8v2.667h-8v8h-2.667v-8z"></path>
+</symbol>
+
+<symbol id="icon-arrow-right" viewBox="0 0 20 20">
+<path d="M16.172 9l-6.071-6.071 1.414-1.414 8.485 8.485-8.485 8.485-1.414-1.414 6.071-6.071h-16.172v-2z"></path>
+</symbol>
+
+<symbol id="icon-arrow-down" viewBox="0 0 48 48">
+<path d="M14 20L24 30L34 20" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+</defs>
+</svg>

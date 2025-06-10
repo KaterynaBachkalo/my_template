@@ -1,0 +1,139 @@
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.privacy-section {
+  background-color: fn.get-color('light');
+}
+
+.subtitle-wrap.privacy {
+  margin-bottom: 40px;
+}
+
+.subtitle-bg.policy,
+.subtitle.policy {
+  font-size: 40px;
+
+  @include mx.mq('lg') {
+    font-size: 48px;
+  }
+}
+
+.subtitle-bg.terms,
+.subtitle.terms {
+  font-size: 40px;
+
+  @include mx.mq('lg') {
+    font-size: 48px;
+  }
+}
+
+.privacy-container {
+  position: relative;
+  padding: 80px 16px 40px;
+  color: fn.get-color('dark');
+
+  @include mx.mq('lg') {
+    padding: 104px 189px 40px;
+  }
+}
+
+.privacy-title {
+  @extend %title-pages;
+  text-align: start;
+  margin-bottom: 16px;
+}
+
+.privacy-text {
+  @extend %text-pages;
+  margin-bottom: 0;
+
+  &.gap {
+    margin-bottom: 24px;
+  }
+
+  &.small-gap {
+    margin-bottom: 15px;
+
+    @include mx.mq('lg') {
+      margin-bottom: 24px;
+    }
+  }
+
+  &.ind {
+    margin-left: 10px;
+  }
+
+  &.bold {
+    font-weight: 500;
+  }
+}
+
+.privacy-list {
+  list-style-type: disc;
+
+  list-style-position: inside;
+
+  &>p {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  &>li {
+    position: relative;
+    @extend %text-pages;
+    margin-left: 25px;
+    display: block;
+
+    &::before {
+      text-decoration: none;
+      content: '• ';
+      position: absolute;
+      left: -15px;
+    }
+  }
+
+  &.blue {
+    text-decoration: underline;
+    // color: #0000FF;
+  }
+
+  &.gap {
+    margin-bottom: 24px;
+
+    @include mx.mq('lg') {
+      margin-bottom: 24px;
+    }
+  }
+
+  &.small-gap {
+    margin-bottom: 15px;
+
+    @include mx.mq('lg') {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.privacy-link {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  text-decoration: underline;
+  // color: #0000FF;
+}
+
+.privacy-item {
+  margin-bottom: 0;
+}
+
+.privacy-subtitle {
+  font-family: fn.get-family('title');
+
+  @include mx.font(20, 150, 0, 500);
+  margin-bottom: 8px;
+
+  @include mx.mq('lg') {
+    @include mx.font(24, 150, 0, 500);
+  }
+}

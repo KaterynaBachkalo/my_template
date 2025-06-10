@@ -1,0 +1,33 @@
+$breakpoints: (
+  'x-sm': 320px,
+  'sm': 375px,
+  'lg': 1440px,
+);
+
+$colors: (
+  'bg': #FFFEFA,
+  'header': #018EE2,
+  'light-text': #FFFFFF,
+  'title': #0B466F,
+  'light': #FFFEFA,
+  'dark': #0B466F,
+  'blue': #E0F1FE,
+  'yellow': #FFF7C8,
+  'purple': #FFE9FB,
+  'green': #059006,
+  'accent': #FF7800,
+  'footer': #018EE2,
+  'transparent': transparent,
+  'current': currentColor,
+);
+
+$shadows: (
+  'link-hover': '',
+  'button': '',
+  'navigation': '',
+);
+
+$families: (
+  'title': ("Afacad", sans-serif),
+  'text': ("Afacad", sans-serif),
+);

@@ -1,0 +1,29 @@
+{
+  "name": "Block Puzzle: Adventure Master",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "vite": "^6.2.0",
+    "vite-plugin-svg-sprite": "^0.6.2"
+  },
+  "dependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.23.0",
+    "eslint": "^9.23.0",
+    "eslint-plugin-html": "^8.1.2",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3",
+    "sass": "^1.86.0",
+    "swiper": "^11.2.6",
+    "vite-plugin-full-reload": "^1.2.0",
+    "vite-plugin-html-inject": "^1.1.2"
+  }
+}

@@ -1,0 +1,76 @@
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.features-container {
+  color: fn.get-color('light');
+}
+
+.features-list {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-direction: column;
+
+  @include mx.mq('lg') {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+.features-list-first,
+.features-list-last {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-direction: column;
+
+  @include mx.mq('lg') {
+    width: 330px;
+    gap: 24px;
+  }
+}
+
+.features-item {
+  @extend %subtext-h2;
+  border-radius: 8px;
+  padding: 12px 24px;
+  text-align: center;
+  background-color: fn.get-color('blue');
+
+  @include mx.mq('lg') {
+    padding: 6px;
+    min-height: 97.33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.features-item-img {
+  padding: 0;
+}
+
+.features-img {
+  width: 311px;
+  height: 199px;
+
+  @include mx.mq('lg') {
+    width: 508px;
+    height: 324px;
+  }
+}
+
+.features-title {
+  @extend %title-h3;
+  margin-bottom: 10px;
+
+  @include mx.mq('lg') {
+    margin-bottom: 0;
+  }
+}
+
+.features-text {
+  @extend %text-h3;
+}

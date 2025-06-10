@@ -1,0 +1,69 @@
+@use 'sass:map';
+@use 'sass:list';
+@use 'sass:math';
+
+@use 'variables' as var;
+@use 'functions' as fn;
+
+@mixin font($_fsz, $_lnh, $_ls, $_fw: 400) {
+  font-size: #{$_fsz}px;
+
+  @if $_lnh < 100 {
+    $result: math.div($_lnh, $_fsz);
+    line-height: math.div(math.round($result * 100), 100);
+  }
+
+  @if $_lnh >=100 {
+    line-height: math.div($_lnh, 100);
+  }
+
+  letter-spacing: #{calc($_ls/100)}em;
+  font-weight: #{$_fw};
+}
+
+@mixin textBorder($_width, $_color) {
+  text-shadow:
+    #{$_width}px 0 0 #{$_color},
+    -#{$_width}px 0 0 #{$_color},
+    0 #{$_width}px 0 #{$_color},
+    0 -#{$_width}px 0 #{$_color};
+}
+
+@mixin mq(
+  $bp: x-sm,
+  $type: min,
+  $is-retina: false,
+  $retina-image: null,
+  $default-image: null
+) {
+  @if map.has-key(var.$breakpoints, $bp) {
+    $width: map.get(var.$breakpoints, $bp);
+
+    @if $type ==max {
+      $width: $width - 0.02px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @if $is-retina {
+        background: url(#{$default-image})
+          no-repeat
+          center
+          center;
+        background-size: cover;
+
+        @media (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+          background: url(#{$retina-image}) no-repeat center
+            center;
+          background-size: cover;
+          @content;
+        }
+      } @else {
+        @content;
+      }
+    }
+  } @else {
+    @error "This breakpoint doesn't exist";
+  }
+}

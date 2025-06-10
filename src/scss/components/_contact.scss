@@ -1,0 +1,78 @@
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.contact-container {
+  color: fn.get-color('dark');
+}
+
+.contact-text {
+  @include mx.font(24, 130, 0, 300);
+  text-align: center;
+  width: 279px;
+  margin-bottom: 16px;
+
+  @include mx.mq('lg') {
+    margin: 0;
+    text-align: left;
+    @include mx.font(32, 130, 0, 300);
+    width: 360px;
+  }
+}
+
+.contact-wrap {
+  font-style: normal;
+}
+
+.contact-img {
+  width: 279px;
+  height: 279px;
+  margin-bottom: 16px;
+
+  @include mx.mq('lg') {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+  }
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+
+  & li {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    @include mx.font(16, 130, 0, 400);
+
+    & img {
+      width: 24px;
+      height: 24px;
+    }
+
+    @include mx.mq('lg') {
+      @include mx.font(24, 130, 0, 400);
+    }
+  }
+
+  @include mx.mq('lg') {
+    margin-bottom: 0;
+  }
+}
+
+
+
+.contact-main-wrap {
+  @include mx.mq('lg') {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin: 0 auto;
+  }
+}

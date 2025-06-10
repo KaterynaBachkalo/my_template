@@ -1,0 +1,63 @@
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.footer-container {
+  padding: 40px 16px;
+  background: fn.get-color('footer');
+  color: fn.get-color('light');
+
+  @include mx.mq('lg') {
+    padding: 40px 80px;
+  }
+}
+
+.footer-item {
+  text-decoration: underline;
+  @extend %item-footer;
+
+}
+
+.footer-rights {
+  @extend %rights-footer;
+  text-align: center;
+
+  @include mx.mq('lg') {
+    order: 1;
+  }
+}
+
+.footer-wrapper {
+  @include mx.mq('lg') {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    align-items: center;
+  }
+}
+
+.footer-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 16px;
+
+  @include mx.mq('lg') {
+    order: 3;
+    margin-bottom: 0;
+    gap: 24px;
+  }
+}
+
+.footer-img {
+  width: 320px;
+  height: 180px;
+  margin: 0 auto 16px;
+
+  @include mx.mq('lg') {
+    order: 2;
+    margin: 0;
+  }
+}
