@@ -7,35 +7,26 @@
   background-color: fn.get-color('light');
 }
 
-.subtitle-wrap.privacy {
-  margin-bottom: 40px;
-}
-
-.subtitle-bg.policy,
-.subtitle.policy {
-  font-size: 40px;
-
-  @include mx.mq('lg') {
-    font-size: 48px;
-  }
-}
-
-.subtitle-bg.terms,
+.subtitle.policy,
 .subtitle.terms {
-  font-size: 40px;
+  @include mx.font(28, 150, 0, 700);
+  margin-bottom: 24px;
+  color: fn.get-color('dark');
+  text-align: center;
 
   @include mx.mq('lg') {
-    font-size: 48px;
+    @include mx.font(48, 130, 0, 700);
+    margin-bottom: 56px;
   }
 }
 
 .privacy-container {
   position: relative;
-  padding: 80px 16px 40px;
+  padding: 40px 16px 99px;
   color: fn.get-color('dark');
 
   @include mx.mq('lg') {
-    padding: 104px 189px 40px;
+    padding: 160px 72px 68px;
   }
 }
 

@@ -3,14 +3,45 @@
 @use '../utils/functions' as fn;
 @use '../utils/mixins' as mx;
 
-.footer-container {
-  padding: 40px 16px;
+.footer-section {
   background: fn.get-color('footer');
+}
+
+.footer-container {
+  padding: 32px;
   color: fn.get-color('light');
 
   @include mx.mq('lg') {
-    padding: 40px 80px;
+    padding: 24px 72px;
   }
+}
+
+.footer-title {
+  text-align: center;
+  @include mx.font(16, 150, 0, 600);
+  margin-bottom: 8px;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(/img/hero/paws.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    @include mx.mq('lg') {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  @include mx.mq('lg') {
+    @include mx.font(24, 150, 0, 600);
+    margin-bottom: 16px;
+  }
+
 }
 
 .footer-item {
@@ -28,26 +59,15 @@
   }
 }
 
-.footer-wrapper {
-  @include mx.mq('lg') {
-    display: flex;
-    justify-content: center;
-    gap: 48px;
-    align-items: center;
-  }
-}
-
 .footer-list {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 12px;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 
   @include mx.mq('lg') {
-    order: 3;
-    margin-bottom: 0;
-    gap: 24px;
+    margin-bottom: 16px;
   }
 }
 

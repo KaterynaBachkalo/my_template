@@ -1,0 +1,64 @@
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.join-wrapper {
+    position: relative;
+
+    @include mx.mq('lg') {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.join-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include mx.mq('lg') {
+        gap: 24px;
+    }
+}
+
+.join-img {
+    width: 100%;
+    height: 232px;
+    margin: 0 auto 16px;
+
+    @include mx.mq('lg') {
+        width: 636px;
+        height: 430px;
+        position: absolute;
+        right: 7px;
+        top: 29px;
+    }
+}
+
+.join-text {
+    @extend %text-h4;
+}
+
+.join-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include mx.mq('lg') {
+        width: 416px;
+        gap: 16px;
+    }
+}
+
+.join-item {
+    @extend %text-h4;
+    background: #FFE5FE;
+    border-radius: 12px;
+    padding: 8px 12px;
+    text-align: center;
+
+    @include mx.mq('lg') {
+        padding: 12px;
+    }
+}

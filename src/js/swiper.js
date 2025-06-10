@@ -342,7 +342,7 @@ function handlemoodSwiper() {
       {
         breakpoints: {
           320: {
-            slidesPerView: 2.5,
+            slidesPerView: 2.2,
             spaceBetween: 24,
           },
         },
@@ -370,7 +370,7 @@ function handlelevelsSwiper() {
       {
         breakpoints: {
           320: {
-            slidesPerView: 1.5,
+            slidesPerView: 1.3,
             spaceBetween: 16,
           },
         },

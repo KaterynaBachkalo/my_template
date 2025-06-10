@@ -110,11 +110,11 @@
 
     &:hover,
     &:focus {
-      @include mx.font(12, 130, 0, 600);
+      @include mx.font(18, 150, -3, 600);
     }
 
     &:active {
-      @include mx.font(12, 130, 0, 600);
+      @include mx.font(18, 150, -3, 600);
     }
   }
 }

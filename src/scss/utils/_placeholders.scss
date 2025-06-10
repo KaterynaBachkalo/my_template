@@ -111,20 +111,20 @@
 
 %title-h4 {
   font-family: fn.get-family('text');
-  @include mx.font(18, 130, 0, 300);
+  @include mx.font(16, 150, 0, 500);
 
   @include mx.mq('lg') {
-    @include mx.font(24, 130, 0, 300);
+    @include mx.font(24, 150, 0, 500);
   }
 }
 
 %text-h4 {
   font-family: fn.get-family('text');
 
-  @include mx.font(14, 130, 0, 400);
+  @include mx.font(16, 150, 0, 400);
 
   @include mx.mq('lg') {
-    @include mx.font(16, 130, 0, 400);
+    @include mx.font(24, 150, 0, 400);
   }
 }
 
@@ -135,36 +135,44 @@
 
 %item-footer {
   font-family: fn.get-family('text');
-  @include mx.font(11, 130, 0, 400);
+  @include mx.font(11, 150, 0, 400);
 
   @include mx.mq('sm') {
-    @include mx.font(12, 130, 0, 400);
+    @include mx.font(14, 150, 0, 400);
   }
 
   @include mx.mq('lg') {
-    @include mx.font(16, 130, 0, 400);
+    @include mx.font(18, 150, 0, 400);
   }
 }
 
 %rights-footer {
   font-family: fn.get-family('text');
-  @include mx.font(12, 130, 0, 400);
+  @include mx.font(14, 150, 0, 400);
 
   @include mx.mq('lg') {
-    @include mx.font(16, 130, 0, 400);
+    @include mx.font(18, 150, 0, 400);
   }
 }
 
 %title-pages {
   font-family: fn.get-family('text');
 
-  @include mx.font(24, 130, -2, 500);
+  @include mx.font(18, 130, 0, 600);
+
+  @include mx.mq('lg') {
+    @include mx.font(24, 130, 0, 600);
+  }
 }
 
 %text-pages {
   font-family: fn.get-family('text');
 
-  @include mx.font(16, 130, -1, 400);
+  @include mx.font(16, 130, 0, 400);
+
+  @include mx.mq('lg') {
+    @include mx.font(24, 130, 0, 400);
+  }
 }
 
 %title-cookies {
@@ -180,11 +188,19 @@
 %text-cookies {
   font-family: fn.get-family('text');
 
-  @include mx.font(16, 130, 0, 400);
+  @include mx.font(14, 150, 0, 400);
+
+  @include mx.mq('lg') {
+    @include mx.font(18, 150, 0, 400);
+  }
 }
 
 %button-cookies {
   font-family: fn.get-family('text');
 
-  @include mx.font(14, 100, 0, 300);
+  @include mx.font(14, 120, 0, 400);
+
+  @include mx.mq('lg') {
+    @include mx.font(18, 150, 0, 400);
+  }
 }

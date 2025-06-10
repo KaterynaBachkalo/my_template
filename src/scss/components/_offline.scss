@@ -1,0 +1,73 @@
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.offline-subtext {
+    @extend %text-h3;
+}
+
+.offline-list {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include mx.mq('lg') {
+        flex-direction: row;
+        gap: 80px;
+        margin-bottom: 24px;
+        justify-content: center;
+    }
+}
+
+.offline-item {
+    @extend %text-h4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 18px;
+    background: #E0F1FE;
+    border-radius: 50%;
+    width: 167px;
+    height: 167px;
+    background-position: center;
+    background-size: 75px 75px;
+    background-repeat: no-repeat;
+
+    &:nth-child(1) {
+        background-image: url(/img/offline/1.png);
+    }
+
+    &:nth-child(2) {
+        background-image: url(/img/offline/2.png);
+    }
+
+    &:nth-child(3) {
+        background-image: url(/img/offline/3.png);
+    }
+
+    @include mx.mq('lg') {
+        gap: 18px;
+        padding: 24px;
+        width: 253px;
+        height: 253px;
+    }
+}
+
+.wrap-offline-join {
+    background-image: url(/img/offline/bg_mob.png);
+    background-position: top 108px center;
+    background-size: 907px 414px;
+    background-repeat: no-repeat;
+
+    @include mx.mq('lg') {
+        background-image: url(/img/offline/bg_desk.png);
+        background-size: 1652px 754px;
+        background-position: top 300px center;
+
+    }
+}

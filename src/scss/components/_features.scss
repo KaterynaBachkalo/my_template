@@ -39,6 +39,10 @@
     width: 32px;
     height: 32px;
   }
+
+  @include mx.mq('lg') {
+    gap: 12px;
+  }
 }
 
 .features-text {
