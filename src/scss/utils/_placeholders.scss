@@ -14,77 +14,89 @@
 %title-h1 {
   font-family: fn.get-family('title');
 
-  @include mx.font(25, 130, 0, 400);
+  @include mx.font(40, 150, 0, 700);
 
   @include mx.mq('lg') {
-    @include mx.font(32, 130, 0, 400);
+    @include mx.font(72, 150, 0, 700);
   }
 }
 
 %text-h1 {
   font-family: fn.get-family('text');
 
-  @include mx.font(16, 130, 0, 400);
+  @include mx.font(16, 150, 0, 400);
+
+  @include mx.mq('lg') {
+    @include mx.font(32, 150, 0, 400);
+  }
 }
 
 %subtext-h1 {
   font-family: fn.get-family('text');
 
-  @include mx.font(14, 130, 0, 500);
+  @include mx.font(18, 100, 0, 400);
 
   @include mx.mq('lg') {
-    @include mx.font(16, 130, 0, 500);
+    @include mx.font(24, 100, 0, 400);
   }
 }
 
 %title-h2 {
   font-family: fn.get-family('text');
 
-  @include mx.font(16, 130, 0, 700);
+  @include mx.font(32, 150, 0, 700);
+
+  @include mx.mq('lg') {
+    @include mx.font(48, 150, 0, 600);
+  }
 }
 
 %subtitle-h2 {
   font-family: fn.get-family('title');
 
-  @include mx.font(38, 130, 0, 400);
+  @include mx.font(24, 150, 0, 500);
 
   @include mx.mq('lg') {
-    @include mx.font(48, 130, 0, 400);
+    @include mx.font(32, 150, 0, 500);
   }
 }
 
 %text-h2 {
   font-family: fn.get-family('text');
-  @include mx.font(16, 130, 0, 300);
+  @include mx.font(14, 150, 0, 400);
 
   @include mx.mq('lg') {
-    @include mx.font(18, 130, 0, 300);
+    @include mx.font(24, 150, 0, 400);
   }
 }
 
 %subtext-h2 {
   font-family: fn.get-family('text');
-  @include mx.font(14, 130, 0, 400);
+  @include mx.font(16, 150, 0, 400);
 
   @include mx.mq('lg') {
-    @include mx.font(16, 130, 0, 400);
+    @include mx.font(24, 150, 0, 400);
   }
 }
 
 %title-h3 {
   font-family: fn.get-family('text');
 
-  @include mx.font(20, 130, 0, 300);
+  @include mx.font(18, 150, 0, 500);
 
   @include mx.mq('lg') {
-    @include mx.font(24, 130, 0, 300);
+    @include mx.font(24, 150, 0, 500);
   }
 }
 
 %text-h3 {
   font-family: fn.get-family('text');
 
-  @include mx.font(16, 130, 0, 400);
+  @include mx.font(16, 150, 0, 400);
+
+  @include mx.mq('lg') {
+    @include mx.font(24, 150, 0, 400);
+  }
 }
 
 %subtext-h3 {

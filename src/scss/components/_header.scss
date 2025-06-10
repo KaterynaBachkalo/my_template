@@ -125,8 +125,9 @@
   |============================
 */
 .header-mobile {
-  background: fn.get-color('bg');
-  height: 48px;
+  background: fn.get-color('header');
+
+  height: 76px;
   width: 100%;
   position: fixed;
   top: 0;

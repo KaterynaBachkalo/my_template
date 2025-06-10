@@ -5,8 +5,7 @@
 
 
 .play-text {
-  @extend %title-h3;
-  text-align: center;
+  @extend %text-h3;
   margin-bottom: 16px;
 
   @include mx.mq('lg') {
@@ -20,30 +19,35 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-bottom: 16px;
+
+  @include mx.mq('lg') {
+    flex-direction: row;
+    gap: 24px;
+  }
 }
 
 .play-item {
   display: flex;
-  gap: 16px;
+  gap: 6px;
   align-items: center;
   @extend %text-h3;
-  margin-right: -7px;
+  background: #FFF9EC;
+  border: 1px solid #FF900A;
+  padding: 16px;
+  border-radius: 16px;
 
-  &::before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    background-color: fn.get-color('accent');
-    border-radius: 50%;
+  & span {
+    @include mx.font(24, 150, 0, 600);
+    color: #CC5702;
+
+    @include mx.mq('lg') {
+      @include mx.font(40, 150, 0, 600);
+    }
   }
-}
 
-.play-main-wrapper {
   @include mx.mq('lg') {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 48px;
+    gap: 16px;
+    padding: 24px;
   }
 }

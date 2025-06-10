@@ -3,6 +3,19 @@
 @use '../utils/functions' as fn;
 @use '../utils/mixins' as mx;
 
+.about-section {
+  background-image: url(/img/about/bg_mob.png);
+  background-size: 693px 320px;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  @include mx.mq('lg') {
+    background-image: url(/img/about/bg_desk.png);
+    background-size: 1658px 765px;
+    background-position: bottom center;
+  }
+}
+
 .about-container {
   color: fn.get-color('dark');
 }
@@ -14,18 +27,23 @@
 
   @include mx.mq('lg') {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    gap: 48px;
+    gap: 24px;
+  }
+}
+
+.about-wrap {
+  @include mx.mq('lg') {
+    width: 636px;
   }
 }
 
 .about-text {
   @extend %text-h2;
-  text-align: center;
 
   @include mx.mq('lg') {
-    width: 350px;
+
     margin: 0;
     text-align: left;
   }
@@ -43,10 +61,13 @@
 
 .about-list {
   display: flex;
-  flex-direction: column;
   gap: 16px;
+  flex-wrap: wrap;
 
-  @include mx.mq('lg') {}
+  @include mx.mq('lg') {
+    gap: 16px 266px;
+    width: 636px;
+  }
 }
 
 .about-item {
@@ -54,13 +75,16 @@
   gap: 16px;
   align-items: center;
   @extend %subtext-h2;
+  border: 1px solid #7CCEFD;
+  border-radius: 16px;
+  padding: 11px;
 
+  @include mx.mq('lg') {
+    width: 370px;
+    justify-content: center;
 
-  &::before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    background-color: fn.get-color('accent');
-    border-radius: 50%;
+    &:nth-child(2) {
+      margin-left: auto;
+    }
   }
 }

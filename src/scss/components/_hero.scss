@@ -7,33 +7,89 @@
   padding: 32px 16px 0;
 
   @include mx.mq('lg') {
-    padding: 494px 189px 40px;
+    padding: 197px 72px 0px;
+  }
+}
+
+.hero-wrap {
+  @include mx.mq('lg') {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 40px;
   }
 }
 
 .hero-img {
-  height: 267px;
+  height: 203px;
   width: 100%;
   margin: 0 auto 18px;
 
   @include mx.mq('lg') {
-    display: none;
+    width: 636px;
+    height: 377px;
+    margin: 0;
   }
 }
 
 .hero-title {
   @extend %title-h1;
   text-align: center;
-  margin-bottom: 8px;
+  margin-bottom: 32px;
   color: fn.get-color('dark');
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url(/img/hero/paws.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    @include mx.mq('lg') {
+      width: 72px;
+      height: 72px;
+    }
+  }
+
+  @include mx.mq('lg') {
+    text-align: left;
+    margin-bottom: 40px;
+  }
 }
 
 .hero-text {
   @extend %text-h1;
+  margin-bottom: 16px;
+}
+
+.hero-list {
+  @include mx.mq('lg') {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.hero-item {
+  @extend %subtext-h1;
+  display: inline-flex;
+  padding: 8px 16px;
+  background: #E0F1FE;
+  border-radius: 12px;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
 
   @include mx.mq('lg') {
-    & br {
-      display: inline;
+    padding: 16px;
+    width: 336px;
+    justify-content: center;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
     }
   }
 }

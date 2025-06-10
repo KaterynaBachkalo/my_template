@@ -1,0 +1,70 @@
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.mood-text {
+    @extend %text-h3;
+    margin-bottom: 16px;
+
+    @include mx.mq('lg') {
+        margin-bottom: 24px;
+    }
+}
+
+.mood-wrapper {
+    display: flex;
+    justify-content: flex-start;
+
+    @include mx.mq('lg') {
+        justify-content: center;
+        gap: 80.75px;
+    }
+}
+
+
+.swiper-slide.mood-slide {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease-in;
+    width: 134px;
+    height: 52px;
+    background: #F0F8FF;
+    border: 1px solid #36B6FA;
+    padding: 8px 16px;
+    border-radius: 16px;
+
+    & img {
+        width: 24px;
+        height: 24px;
+
+        @include mx.mq('lg') {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    @include mx.mq('lg') {
+        width: calc((100% - 4*80.75px) / 5);
+        padding: 18px 24px;
+        height: 72px;
+    }
+}
+
+
+.mood-item-text {
+    @extend %title-h3;
+}
+
+.mood-subtext {
+    @extend %text-h3;
+    margin-top: 16px;
+
+    @include mx.mq('lg') {
+        margin-top: 24px;
+    }
+}

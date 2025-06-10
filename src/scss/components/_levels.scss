@@ -1,0 +1,83 @@
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.levels-section {
+    background-image: url(/img/levels/bg_mob.png);
+    background-position: bottom 16px center;
+    background-size: 498px 335px;
+    background-repeat: no-repeat;
+
+    @include mx.mq('lg') {
+        background-image: url(/img/levels/bg_desk.png);
+        background-position: bottom 15px center;
+        background-size: 1359px 479px;
+    }
+}
+
+.levels-wrapper {
+    display: flex;
+    justify-content: flex-start;
+
+    @include mx.mq('lg') {
+        gap: 0 354px;
+        flex-wrap: wrap;
+    }
+}
+
+
+.swiper-slide.levels-slide {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    transition: all 0.3s ease-in;
+    width: 253px;
+    height: 83px;
+    background: #FFF9EC;
+    border: 1px solid #FFAB32;
+    padding: 16px;
+    border-radius: 16px;
+
+    @include mx.mq('lg') {
+        width: 306px;
+        padding: 24px;
+        min-height: 102px;
+
+        &:nth-child(3) {
+            margin-left: 330px;
+        }
+
+        &:nth-child(4) {
+            margin-left: auto;
+            margin-top: -51px;
+        }
+    }
+}
+
+
+.levels-item-text {
+    @include mx.font(16, 150, 0, 400);
+
+    & span {
+        @extend %title-h3;
+    }
+
+    @include mx.mq('lg') {
+        @include mx.font(18, 150, 0, 400);
+    }
+}
+
+.levels-subtext {
+    @include mx.font(24, 150, 0, 400);
+    margin-top: 16px;
+
+    @include mx.mq('lg') {
+        margin-top: 24px;
+    }
+}

@@ -60,33 +60,25 @@ button {
 .title {
   @extend %title-h2;
   color: fn.get-color('title');
-  display: inline-flex;
-  padding: 8px;
   margin-bottom: 40px;
-  border-bottom: 2px solid fn.get-color('accent');
+  text-align: center;
 
   &.light {
     color: fn.get-color('light');
   }
 
   @include mx.mq('lg') {
-    margin-bottom: 24px;
+    margin-bottom: 56px;
   }
 }
 
 .subtitle {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-
   @extend %subtitle-h2;
-  text-align: center;
-  color: fn.get-color('light');
+  color: fn.get-color('accent');
+  margin-bottom: 24px;
 
   @include mx.mq('lg') {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
 }
 
@@ -113,10 +105,10 @@ button {
 }
 
 .my-container {
-  padding: 50px 16px 40px;
+  padding: 82px 16px 0;
 
   @include mx.mq('lg') {
-    padding: 80px;
+    padding: 135px 72px 0;
   }
 }
 
@@ -201,7 +193,8 @@ dt {
 .swiper-pagination-custom-dark {
   display: flex;
   justify-content: center;
-  min-height: 8px;
+  min-height: 32px;
+  margin-top: 24px;
 
   @include mx.mq('lg') {
     display: none;
@@ -211,11 +204,10 @@ dt {
 .swiper-pagination-custom>.swiper-pagination-bullet {
   opacity: 1 !important;
 
-  min-width: 8px;
-  min-height: 8px;
+  min-width: 32px;
+  min-height: 32px;
 
-  background-color: #ffffff !important;
-  border: 1px solid #25478d !important;
+  background-color: #FFE1F9 !important;
   border-radius: 50%;
   transition: background-color 0.3s ease;
 }
@@ -223,8 +215,7 @@ dt {
 .swiper-pagination-custom>.swiper-pagination-bullet-active {
   opacity: 1 !important;
 
-  background-color: #25478d !important;
-  border: 1px solid #25478d !important;
+  background-color: #FF9FF6 !important;
 }
 
 .swiper-pagination-custom-dark>.swiper-pagination-bullet {
